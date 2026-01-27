@@ -1,0 +1,4 @@
+services:
+  ai_elvis.link_opportunities:
+    class: Drupal\ai_elvis\Service\LinkOpportunitiesService
+    arguments: ['@entity_type.manager', '@logger.factory', '@plugin.manager.search_api.parse_mode']

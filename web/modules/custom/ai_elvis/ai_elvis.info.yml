@@ -1,0 +1,5 @@
+name: 'ai_elvis'
+type: module
+description: 'AI Content Elvis'
+package: Custom
+core_version_requirement: ^10 || ^11

@@ -1,0 +1,10 @@
+similar_content_linking:
+  version: 1.x
+  css:
+    theme:
+      css/similar-content-linking.css: {}
+  js:
+    js/similar-content-linking.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
