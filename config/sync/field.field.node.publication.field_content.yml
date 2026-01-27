@@ -1,23 +1,21 @@
-uuid: bf28997b-0422-481f-81eb-9cb04fefaa37
+uuid: 8ac894b5-2ef6-4672-8427-acdb57c7709e
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_content
     - filter.format.content_format
-    - node.type.page
+    - node.type.publication
   module:
     - text
-_core:
-  default_config_hash: _5V-RqipdviPFL737_mD5u0cYh_cuh_FcpFOEZvFj50
-id: node.page.field_content
+id: node.publication.field_content
 field_name: field_content
 entity_type: node
-bundle: page
-label: Body
+bundle: publication
+label: Content
 description: 'The content of this page.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

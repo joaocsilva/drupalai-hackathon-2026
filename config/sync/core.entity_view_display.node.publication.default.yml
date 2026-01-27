@@ -1,0 +1,59 @@
+uuid: 79cefa2f-3b58-412d-900c-d99e2ac8766e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.publication.field_content
+    - field.field.node.publication.field_description
+    - field.field.node.publication.field_featured_image
+    - field.field.node.publication.field_metatags
+    - field.field.node.publication.field_tags
+    - node.type.publication
+  module:
+    - metatag
+    - text
+    - user
+id: node.publication.default
+targetEntityType: node
+bundle: publication
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: hero
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  search_api_excerpt: true

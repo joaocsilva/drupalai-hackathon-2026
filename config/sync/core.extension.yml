@@ -3,6 +3,7 @@ _core:
 module:
   ai: 0
   ai_provider_amazeeio: 0
+  ai_search: 0
   announcements_feed: 0
   automated_cron: 0
   automatic_updates: 0
@@ -67,6 +68,7 @@ module:
   menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
+  metatag: 0
   modeler_api: 0
   mysql: 0
   navigation: 0
@@ -84,6 +86,9 @@ module:
   sam: 0
   scheduler: 0
   scheduler_content_moderation_integration: 0
+  schema_article: 0
+  schema_metatag: 0
+  search_api: 0
   svg_image: 0
   symfony_mailer_lite: 0
   system: 0
