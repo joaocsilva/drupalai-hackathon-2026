@@ -10,3 +10,6 @@ indexing_options:
   title:
     indexing_option: contextual_content
     max: -1
+  name:
+    indexing_option: contextual_content
+    max: -1

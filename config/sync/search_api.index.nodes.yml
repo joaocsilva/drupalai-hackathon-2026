@@ -3,18 +3,29 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.full
+    - field.storage.node.field_tags
     - search_api.server.amazee
   module:
     - metatag
     - node
+    - taxonomy
 id: nodes
 name: Nodes
 description: ''
 read_only: false
 field_settings:
+  name:
+    label: taxonomy_term_name
+    datasource_id: 'entity:node'
+    property_path: 'field_tags:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_tags
+      module:
+        - taxonomy
   rendered_item:
-    label: 'Rendered HTML output'
+    label: rendered_html_output
     property_path: rendered_item
     type: text
     configuration:
@@ -22,10 +33,11 @@ field_settings:
         - anonymous
       view_mode:
         'entity:node':
-          ':default': full
+          ':default': default
           page: ':default'
+          publication: ':default'
   tag:
-    label: 'Metatags > Tag'
+    label: metatags_and_schema
     datasource_id: 'entity:node'
     property_path: 'metatag:tag'
     type: string
@@ -33,7 +45,7 @@ field_settings:
       module:
         - metatag
   title:
-    label: Title
+    label: node_title
     datasource_id: 'entity:node'
     property_path: title
     type: string
@@ -44,8 +56,7 @@ datasource_settings:
   'entity:node':
     bundles:
       default: true
-      selected:
-        - publication
+      selected: {  }
     languages:
       default: true
       selected: {  }
