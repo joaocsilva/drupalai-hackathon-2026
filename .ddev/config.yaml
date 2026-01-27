@@ -1,3 +1,4 @@
+name: hackathon
 type: drupal11
 docroot: web
 php_version: "8.3"
@@ -8,6 +9,8 @@ additional_fqdns: []
 database:
     type: mysql
     version: "8.0"
+bind_all_interfaces: true
+host_webserver_port: "8080"
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
