@@ -9,13 +9,19 @@
         "docs": "https://new.drupal.org/docs/drupal-cms",
         "chat": "https://drupal.org/node/314178"
     },
-    "repositories": {
-        "drupal": {
+    "repositories": [
+        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
-    },
+    ],
     "require": {
+        "php": ">=8.3",
+        "ext-pgsql": "*",
         "composer/composer": "^2.8",
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^2.0",
@@ -26,7 +32,6 @@
         "drupal/config_ignore": "^3.3",
         "drupal/core": "^11.3",
         "drupal/core-composer-scaffold": "^11.3",
-        "drupal/core-project-message": "^11.3",
         "drupal/core-recipe-unpack": "^11.3",
         "drupal/core-recommended": "^11.3",
         "drupal/core-vendor-hardening": "^11.3",
@@ -40,7 +45,8 @@
         "drupal/mercury": "@beta",
         "drupal/recipe_installer_kit": "^1",
         "drupal/schema_metatag": "^3.0",
-        "drupal/webform": "@beta"
+        "drupal/webform": "@beta",
+        "oomphinc/composer-installers-extender": "^2.0"
     },
     "require-dev": {
         "drush/drush": "^13.6.1"
@@ -55,9 +61,9 @@
             "composer/installers": true,
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
-            "drupal/core-project-message": true,
             "drupal/core-recipe-unpack": true,
             "drupal/core-vendor-hardening": true,
+            "oomphinc/composer-installers-extender": true,
             "php-http/discovery": true
         },
         "bin-dir": "vendor/bin",
@@ -78,7 +84,11 @@
         },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
@@ -88,19 +98,9 @@
             "./recipes/{$name}": ["type:drupal-recipe"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         },
-        "drupal-core-project-message": {
-            "include-keys": ["homepage", "support"],
-            "post-create-project-cmd-message": [
-                "<bg=blue;fg=white>                                                   </>",
-                "<bg=blue;fg=white>  Congratulations, you’ve installed Drupal CMS!    </>",
-                "<bg=blue;fg=white>                                                   </>",
-                "",
-                "<bg=yellow;fg=black>Next steps</>:",
-                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
-                "  * Get support: https://drupal.org/support",
-                "  * Get involved with the Drupal community: https://drupal.org/getting-involved"
-            ]
-        },
+        "installer-types": [
+            "bower-asset", "npm-asset"
+        ],
         "drupal-core-vendor-hardening": {
             "composer/composer": false
         },
@@ -112,10 +112,5 @@
                 "#3568950: Let the agent know that the tools were succesful": "https://git.drupalcode.org/project/canvas/-/merge_requests/493.patch"
             }
         }
-    },
-    "scripts": {
-        "post-update-cmd": [
-            "@php -r \"@unlink('vendor/bin/composer');\""
-        ]
     }
 }
