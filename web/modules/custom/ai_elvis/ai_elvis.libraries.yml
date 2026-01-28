@@ -4,6 +4,6 @@ dashboard:
     theme:
       css/index.css: {}
   js:
-    css/index.js: {}
+    js/index.js: {}
   dependencies:
     - core/drupal
