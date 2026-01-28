@@ -1,3 +1,30 @@
+{% macro chart(value) %}
+  {% set label = 'Needs Work' %}
+  {% if value < 20 %}
+    {% set color = '--error' %}
+  {% elseif value < 50 %}
+    {% set color = '--warning' %}
+  {% elseif value < 80 %}
+    {% set color = '--secondary-140' %}
+  {% else %}
+    {% set color = '--success' %}
+    {% set label = 'Excellent' %}
+  {% endif %}
+  {% set dashoffset = (169 - (1.69 * value))|round %}
+  <div class="relative inline-flex items-center justify-center">
+    <svg width="60" height="60" class="transform -rotate-90">
+      <circle cx="30" cy="30" r="27" fill="none" stroke="hsl(var(--dark-10))" stroke-width="6"></circle>
+      <circle cx="30" cy="30" r="27" fill="none" stroke="hsl(var({{ color }}))" stroke-width="6" stroke-dasharray="169.64600329384882" stroke-dashoffset="{{ dashoffset }}" stroke-linecap="round" class="transition-all duration-500"></circle>
+    </svg>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <span class="text-sm font-bold" style="color: hsl(var({{ color }}));">{{ value }}</span>
+    </div>
+  </div>
+  <div class="text-xs font-medium text-center" style="color: hsl(var({{ color }}));">
+    {{ label }}
+  </div>
+{% endmacro %}
+
 <div class="min-h-screen bg-dark-5">
   <header class="bg-primary text-primary-foreground">
     <div class="container mx-auto px-6 py-6">
@@ -148,18 +175,7 @@
             </div>
             <div class="flex-shrink-0 flex items-center gap-4">
               <div class="flex-1">
-                <div class="relative inline-flex items-center justify-center">
-                  <svg width="60" height="60" class="transform -rotate-90">
-                    <circle cx="30" cy="30" r="27" fill="none" stroke="hsl(var(--dark-10))" stroke-width="6"></circle>
-                    <circle cx="30" cy="30" r="27" fill="none" stroke="hsl(var(--error))" stroke-width="6" stroke-dasharray="169.64600329384882" stroke-dashoffset="135.71680263507906" stroke-linecap="round" class="transition-all duration-500"></circle>
-                  </svg>
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="text-sm font-bold" style="color: hsl(var(--error));">20</span>
-                  </div>
-                </div>
-                <div class="text-xs font-medium text-destructive">
-                  Needs work
-                </div>
+                {{ _self.chart(publication.score|default(100)) }}
               </div>
               <button
                 class="dashboard__collapse-button inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 gap-2 collapse-button"
@@ -277,7 +293,7 @@
                       <line x1="12" x2="12" y1="8" y2="12"></line>
                       <line x1="12" x2="12.01" y1="16" y2="16"></line>
                     </svg>
-                    <span class="font-medium text-sm">Portal Backlinks</span>
+                    <span class="font-medium text-sm">Domain Backlinks</span>
                   </div>
                 </div>
               </div>

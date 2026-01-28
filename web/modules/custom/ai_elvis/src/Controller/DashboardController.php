@@ -23,13 +23,26 @@ class DashboardController extends ControllerBase {
     $nids = $query->execute();
     $nodes = Node::loadMultiple($nids);
 
+    $service = \Drupal::service('plugin.manager.node_measure');
+    /** @var \Drupal\ai_elvis\Plugin\NodeMeasure\PossibleBacklinks $backLinks */
+    $backLinks = $service->createInstance('possible_backlinks');
+    /** @var \Drupal\ai_elvis\Plugin\NodeMeasure\MetatagsPresence $metatags */
+    $metatags = $service->createInstance('metatags_presence');
+    /** @var \Drupal\ai_elvis\Plugin\NodeMeasure\SchemaPresence $schema */
+    $schema = $service->createInstance('schema_presence');
+
     $publications = [];
     foreach ($nodes as $node) {
+      $nodeMetatags = $metatags->measureNode($node);
+      $nodeBackLinks = $backLinks->measureNode($node);
+      $nodeSchema = $schema->measureNode($node);
+      $finalScore = (int) ($nodeMetatags['score'] + $nodeBackLinks['score'] + $nodeSchema['score'] / 3);
       $publications[] = [
         'title' => $node->getTitle(),
         'summary' => $node->hasField('field_description') ? $node->get('field_description')->value : '',
         'author' => $node->getOwner()->getDisplayName(),
         'date' => date('M d, Y', $node->getCreatedTime()),
+        'score' => $finalScore,
         'image_url' => '',
 //        'image_url' => $node->hasField('field_featured_image') && !$node->get('field_featured_image')->isEmpty()
 //          ? \Drupal::service('file_url_generator')->generateAbsoluteString($node->get('field_featured_image')->entity->getFileUri())
