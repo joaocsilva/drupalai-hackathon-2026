@@ -33,6 +33,16 @@ class DashboardController extends ControllerBase {
 
     $publications = [];
     foreach ($nodes as $node) {
+      $image_url = '';
+      if (!$node->get('field_featured_image')->isEmpty()) {
+        $media = $node->get('field_featured_image')->entity;
+        if ($media && !$media->get('field_media_image')->isEmpty()) {
+          $file = $media->get('field_media_image')->entity;
+          if ($file) {
+            $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri());
+          }
+        }
+      }
       $nodeMetatags = $metatags->measureNode($node);
       $nodeBackLinks = $backLinks->measureNode($node);
       $nodeSchema = $schema->measureNode($node);
@@ -43,10 +53,7 @@ class DashboardController extends ControllerBase {
         'author' => $node->getOwner()->getDisplayName(),
         'date' => date('M d, Y', $node->getCreatedTime()),
         'score' => $finalScore,
-        'image_url' => '',
-//        'image_url' => $node->hasField('field_featured_image') && !$node->get('field_featured_image')->isEmpty()
-//          ? \Drupal::service('file_url_generator')->generateAbsoluteString($node->get('field_featured_image')->entity->getFileUri())
-//          : '',
+        'image_url' => $image_url,
       ];
     }
     return [
