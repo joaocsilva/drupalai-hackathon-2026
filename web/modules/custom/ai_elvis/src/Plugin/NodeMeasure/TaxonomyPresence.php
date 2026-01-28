@@ -72,7 +72,7 @@ final class TaxonomyPresence extends NodeMeasurePluginBase implements ContainerF
     if ($taxonomy_field->isEmpty()) {
       // Get AI suggestions for tags.
       $suggestions = $this->getTagSuggestions($node);
-      $build = [
+      $build['title'] = [
         '#markup' => $this->t('<p><strong>Warning:</strong> No tags are assigned to this node. Please add tags to improve SEO.</p>'),
       ];
       if (!empty($suggestions)) {
@@ -87,7 +87,7 @@ final class TaxonomyPresence extends NodeMeasurePluginBase implements ContainerF
       $score = 0.0;
     }
     else {
-      $build = [
+      $build['title'] = [
         '#markup' => $this->t('<p><strong>Success:</strong> The node is properly tagged with taxonomy terms.</p>'),
       ];
       $score = 1.0;

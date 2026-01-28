@@ -30,6 +30,8 @@ class DashboardController extends ControllerBase {
     $metatags = $service->createInstance('metatags_presence');
     /** @var \Drupal\ai_elvis\Plugin\NodeMeasure\SchemaPresence $schema */
     $schema = $service->createInstance('schema_presence');
+    /** @var \Drupal\ai_elvis\Plugin\NodeMeasure\TaxonomyPresence $taxonomy */
+    $taxonomy = $service->createInstance('taxonomy_presence');
 
     $publications = [];
     foreach ($nodes as $node) {
@@ -46,7 +48,8 @@ class DashboardController extends ControllerBase {
       $nodeMetatags = $metatags->measureNode($node);
       $nodeBackLinks = $backLinks->measureNode($node);
       $nodeSchema = $schema->measureNode($node);
-      $finalScore = (int) ($nodeMetatags['score'] + $nodeBackLinks['score'] + $nodeSchema['score'] / 3);
+      $nodeTaxonomy = $taxonomy->measureNode($node);
+      $finalScore = (int) (($nodeMetatags['score'] + $nodeBackLinks['score'] + $nodeSchema['score'] + $nodeTaxonomy['score']) / 4) * 100;
       $publications[] = [
         'title' => $node->getTitle(),
         'summary' => $node->hasField('field_description') ? $node->get('field_description')->value : '',
@@ -54,6 +57,10 @@ class DashboardController extends ControllerBase {
         'date' => date('M d, Y', $node->getCreatedTime()),
         'score' => $finalScore,
         'image_url' => $image_url,
+        'metatags' => $nodeMetatags['details'],
+        'backlinks' => $nodeBackLinks['details'],
+        'schema' => $nodeSchema['details'],
+        'taxonomy' => $nodeTaxonomy['details'],
       ];
     }
     return [

@@ -212,7 +212,8 @@
                       </svg>
                       <span class="font-medium text-sm">Schema.org Markup</span>
                     </div>
-                    <p class="text-xs text-muted-foreground mt-1">Missing structured data markup</p>
+{#                    <p class="text-xs text-muted-foreground mt-1">Missing structured data markup</p>#}
+                    {{ publication.schema }}
                   </div>
                   <div class="p-3 rounded-sm bg-error-5">
                     <div class="flex items-center gap-2">
@@ -224,19 +225,12 @@
                       <span class="font-medium text-sm">Meta Tags</span>
                     </div>
                     <div class="mt-2 space-y-1">
-                      <div class="flex items-center gap-1 text-xs text-warning">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb h-3 w-3">
-                          <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
-                          <path d="M9 18h6"></path>
-                          <path d="M10 22h4"></path>
-                        </svg>
-                        <span>AI Suggestions:</span>
-                      </div>
-                      <ul class="text-xs text-muted-foreground space-y-1 ml-4">
-                        <li>• Add title tag: Cross-Border Healthcare Rights in the EU | Europa Portal</li>
-                        <li>• Add description: Learn about your rights to receive medical treatment in other EU countries</li>
-                        <li>• Add canonical URL</li>
-                      </ul>
+                      {{ publication.metatags }}
+{#                      <ul class="text-xs text-muted-foreground space-y-1 ml-4">#}
+{#                        <li>• Add title tag: Cross-Border Healthcare Rights in the EU | Europa Portal</li>#}
+{#                        <li>• Add description: Learn about your rights to receive medical treatment in other EU countries</li>#}
+{#                        <li>• Add canonical URL</li>#}
+{#                      </ul>#}
                     </div>
                   </div>
                   <div class="p-3 rounded-sm bg-error-5">
@@ -249,6 +243,7 @@
                       <span class="font-medium text-sm">Content Tags</span>
                     </div>
                     <div class="mt-2 space-y-1">
+                        {{ publication.taxonomy.title }}
                       <div class="flex items-center gap-1 text-xs text-warning">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb h-3 w-3">
                           <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
@@ -258,10 +253,11 @@
                         <span>Suggested Tags:</span>
                       </div>
                       <div class="flex flex-wrap gap-1 mt-1">
-                        <span class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Healthcare</span>
-                        <span class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Citizens Rights</span>
-                        <span class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Cross-Border Services</span>
-                        <span class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ EU Law</span>
+                        {{ publication.taxonomy.suggestions }}
+{#                        <span class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Healthcare</span>#}
+{#                        <span class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Citizens Rights</span>#}
+{#                        <span class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Cross-Border Services</span>#}
+{#                        <span class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ EU Law</span>#}
                       </div>
                     </div>
                   </div>
@@ -294,6 +290,7 @@
                       <line x1="12" x2="12.01" y1="16" y2="16"></line>
                     </svg>
                     <span class="font-medium text-sm">Domain Backlinks</span>
+                    {{ publication.backlinks }}
                   </div>
                 </div>
               </div>
