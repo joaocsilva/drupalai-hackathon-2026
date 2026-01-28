@@ -30,9 +30,10 @@ class DashboardController extends ControllerBase {
         'summary' => $node->hasField('field_description') ? $node->get('field_description')->value : '',
         'author' => $node->getOwner()->getDisplayName(),
         'date' => date('M d, Y', $node->getCreatedTime()),
-        'image_url' => $node->hasField('field_featured_image') && !$node->get('field_featured_image')->isEmpty()
-          ? \Drupal::service('file_url_generator')->generateAbsoluteString($node->get('field_featured_image')->entity->getFileUri())
-          : '',
+        'image_url' => '',
+//        'image_url' => $node->hasField('field_featured_image') && !$node->get('field_featured_image')->isEmpty()
+//          ? \Drupal::service('file_url_generator')->generateAbsoluteString($node->get('field_featured_image')->entity->getFileUri())
+//          : '',
       ];
     }
     return [
