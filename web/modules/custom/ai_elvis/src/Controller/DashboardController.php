@@ -49,13 +49,13 @@ class DashboardController extends ControllerBase {
       $nodeBackLinks = $backLinks->measureNode($node);
       $nodeSchema = $schema->measureNode($node);
       $nodeTaxonomy = $taxonomy->measureNode($node);
-      $finalScore = (int) (($nodeMetatags['score'] + $nodeBackLinks['score'] + $nodeSchema['score'] + $nodeTaxonomy['score']) / 4) * 100;
+      $finalScore = (($nodeMetatags['score'] + $nodeBackLinks['score'] + $nodeSchema['score'] + $nodeTaxonomy['score']) / 4) * 100;
       $publications[] = [
         'title' => $node->getTitle(),
         'summary' => $node->hasField('field_description') ? $node->get('field_description')->value : '',
         'author' => $node->getOwner()->getDisplayName(),
         'date' => date('M d, Y', $node->getCreatedTime()),
-        'score' => $finalScore,
+        'score' => (int) $finalScore,
         'image_url' => $image_url,
         'metatags' => $nodeMetatags['details'],
         'backlinks' => $nodeBackLinks['details'],
