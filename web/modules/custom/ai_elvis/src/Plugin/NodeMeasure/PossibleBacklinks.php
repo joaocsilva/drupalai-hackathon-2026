@@ -6,10 +6,13 @@ namespace Drupal\ai_elvis\Plugin\NodeMeasure;
 
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\ai_elvis\Attribute\NodeMeasure;
 use Drupal\ai_elvis\NodeMeasurePluginBase;
 use Drupal\ai_elvis\Service\LinkOpportunitiesService;
+use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -21,6 +24,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
   description: new TranslatableMarkup('Possible domain backlinks.'),
 )]
 final class PossibleBacklinks extends NodeMeasurePluginBase implements ContainerFactoryPluginInterface {
+
+  use StringTranslationTrait;
 
   /**
    * The link opportunities service.
@@ -66,7 +71,7 @@ final class PossibleBacklinks extends NodeMeasurePluginBase implements Container
   /**
    * {@inheritdoc}
    */
-  public function measureNode(\Drupal\node\NodeInterface $node): array {
+  public function measureNode(NodeInterface $node): array {
     // Extract text content from the node
     $text = $this->extractNodeText($node);
 
@@ -77,7 +82,7 @@ final class PossibleBacklinks extends NodeMeasurePluginBase implements Container
       $build = [
         'score' => 0,
         'details' => [
-          '#markup' => '<p>No content available for similarity search.</p>',
+          '#markup' => $this->t('<p>No content available for similarity search.</p>'),
         ],
       ];
       $metadata->applyTo($build);
@@ -104,7 +109,7 @@ final class PossibleBacklinks extends NodeMeasurePluginBase implements Container
         $items[] = [
           '#type' => 'link',
           '#title' => $result['title'] . ' (Score: ' . round($result['score'], 2) . ')',
-          '#url' => \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $result['nid']]),
+          '#url' => Url::fromRoute('entity.node.canonical', ['node' => $result['nid']]),
           '#suffix' => '<br>',
         ];
       }
@@ -116,7 +121,7 @@ final class PossibleBacklinks extends NodeMeasurePluginBase implements Container
       ];
     } else {
       $build = [
-        '#markup' => '<p>No similar content found for backlink opportunities.</p>',
+        '#markup' => $this->t('<p>No similar content found for backlink opportunities.</p>'),
       ];
     }
 
@@ -130,13 +135,13 @@ final class PossibleBacklinks extends NodeMeasurePluginBase implements Container
   /**
    * Extracts text content from a node.
    *
-   * @param \Drupal\node\NodeInterface $node
+   * @param NodeInterface $node
    *   The node to extract text from.
    *
    * @return string
    *   The extracted text.
    */
-  protected function extractNodeText(\Drupal\node\NodeInterface $node): string {
+  protected function extractNodeText(NodeInterface $node): string {
     // Get the entity view builder
     $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
 
