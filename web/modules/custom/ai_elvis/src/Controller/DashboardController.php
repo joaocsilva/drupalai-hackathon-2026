@@ -35,7 +35,6 @@ class DashboardController extends ControllerBase {
           : '',
       ];
     }
-
     return [
       '#theme' => 'dashboard',
       '#publications' => $publications,
