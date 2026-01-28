@@ -46,6 +46,9 @@ final class MetatagsPresence extends NodeMeasurePluginBase {
             $empty_scores[] = $metatag;
           }
         }
+        else {
+          $empty_scores[] = $metatag;
+        }
       }
     }
 
