@@ -294,14 +294,180 @@
               </div>
               <button
                 class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 gap-2">
-                Expand
+                Collapse
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                      viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round"
                      stroke-linejoin="round"
-                     class="lucide lucide-chevron-down h-4 w-4">
-                  <path d="m6 9 6 6 6-6"></path>
+                     class="lucide lucide-chevron-up h-4 w-4">
+                  <path d="m18 15-6-6-6 6"></path>
                 </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="border-t border-border bg-dark-5 p-6 animate-accordion-down">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <h4
+                  class="font-semibold text-foreground flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="lucide lucide-globe h-4 w-4 text-primary">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path
+                      d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                  SEO Analysis
+                </h4>
+                <div class="space-y-3">
+                  <div class="p-3 rounded-sm bg-error-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-alert h-4 w-4 text-error">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" x2="12" y1="8" y2="12"></line>
+                        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                      </svg>
+                      <span class="font-medium text-sm">Schema.org Markup</span>
+                    </div>
+                    <p class="text-xs text-muted-foreground mt-1">Missing
+                      structured data markup</p></div>
+                  <div class="p-3 rounded-sm bg-error-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-alert h-4 w-4 text-error">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" x2="12" y1="8" y2="12"></line>
+                        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                      </svg>
+                      <span class="font-medium text-sm">Meta Tags</span></div>
+                    <div class="mt-2 space-y-1">
+                      <div class="flex items-center gap-1 text-xs text-warning">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                             height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-lightbulb h-3 w-3">
+                          <path
+                            d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                          <path d="M9 18h6"></path>
+                          <path d="M10 22h4"></path>
+                        </svg>
+                        <span>AI Suggestions:</span></div>
+                      <ul class="text-xs text-muted-foreground space-y-1 ml-4">
+                        <li>• Add title tag: Cross-Border Healthcare Rights in
+                          the EU | Europa Portal
+                        </li>
+                        <li>• Add description: Learn about your rights to
+                          receive medical treatment in other EU countries
+                        </li>
+                        <li>• Add canonical URL</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="p-3 rounded-sm bg-error-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-alert h-4 w-4 text-error">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" x2="12" y1="8" y2="12"></line>
+                        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                      </svg>
+                      <span class="font-medium text-sm">Content Tags</span>
+                    </div>
+                    <div class="mt-2 space-y-1">
+                      <div class="flex items-center gap-1 text-xs text-warning">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                             height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-lightbulb h-3 w-3">
+                          <path
+                            d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                          <path d="M9 18h6"></path>
+                          <path d="M10 22h4"></path>
+                        </svg>
+                        <span>Suggested Tags:</span></div>
+                      <div class="flex flex-wrap gap-1 mt-1"><span
+                          class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Healthcare</span><span
+                          class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Citizens Rights</span><span
+                          class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Cross-Border Services</span><span
+                          class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ EU Law</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <h4
+                  class="font-semibold text-foreground flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="lucide lucide-link2 h-4 w-4 text-primary">
+                    <path d="M9 17H7A5 5 0 0 1 7 7h2"></path>
+                    <path d="M15 7h2a5 5 0 1 1 0 10h-2"></path>
+                    <line x1="8" x2="16" y1="12" y2="12"></line>
+                  </svg>
+                  Link Analysis
+                </h4>
+                <div class="p-3 rounded-sm bg-success-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                      <path d="m9 11 3 3L22 4"></path>
+                    </svg>
+                    <span class="font-medium text-sm">Broken Links</span></div>
+                  <p class="text-xs text-muted-foreground mt-1">No broken links
+                    detected</p></div>
+                <div class="p-3 rounded-sm bg-error-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-alert h-4 w-4 text-error">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" x2="12" y1="8" y2="12"></line>
+                      <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                    </svg>
+                    <span class="font-medium text-sm">Portal Backlinks</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border flex justify-end">
+              <button
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 ecl-button-primary gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round"
+                     class="lucide lucide-square-pen h-4 w-4">
+                  <path
+                    d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                  <path
+                    d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path>
+                </svg>
+                Edit Publication
               </button>
             </div>
           </div>
@@ -409,14 +575,180 @@
               </div>
               <button
                 class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 gap-2">
-                Expand
+                Collapse
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                      viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round"
                      stroke-linejoin="round"
-                     class="lucide lucide-chevron-down h-4 w-4">
-                  <path d="m6 9 6 6 6-6"></path>
+                     class="lucide lucide-chevron-up h-4 w-4">
+                  <path d="m18 15-6-6-6 6"></path>
                 </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="border-t border-border bg-dark-5 p-6 animate-accordion-down">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <h4
+                  class="font-semibold text-foreground flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="lucide lucide-globe h-4 w-4 text-primary">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path
+                      d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                  SEO Analysis
+                </h4>
+                <div class="space-y-3">
+                  <div class="p-3 rounded-sm bg-success-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <span class="font-medium text-sm">Schema.org Markup</span>
+                    </div>
+                    <p class="text-xs text-muted-foreground mt-1">Structured
+                      data is properly implemented</p></div>
+                  <div class="p-3 rounded-sm bg-error-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-alert h-4 w-4 text-error">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" x2="12" y1="8" y2="12"></line>
+                        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                      </svg>
+                      <span class="font-medium text-sm">Meta Tags</span></div>
+                    <div class="mt-2 space-y-1">
+                      <div class="flex items-center gap-1 text-xs text-warning">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                             height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-lightbulb h-3 w-3">
+                          <path
+                            d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                          <path d="M9 18h6"></path>
+                          <path d="M10 22h4"></path>
+                        </svg>
+                        <span>AI Suggestions:</span></div>
+                      <ul class="text-xs text-muted-foreground space-y-1 ml-4">
+                        <li>• Add description: European Green Deal 2024 progress
+                          report covering climate targets and sustainability
+                          initiatives
+                        </li>
+                        <li>• Add keywords: green deal, climate action,
+                          sustainability, EU environment policy
+                        </li>
+                        <li>• Add og:image for social sharing</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="p-3 rounded-sm bg-error-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-alert h-4 w-4 text-error">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" x2="12" y1="8" y2="12"></line>
+                        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                      </svg>
+                      <span class="font-medium text-sm">Content Tags</span>
+                    </div>
+                    <div class="mt-2 space-y-1">
+                      <div class="flex items-center gap-1 text-xs text-warning">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                             height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-lightbulb h-3 w-3">
+                          <path
+                            d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                          <path d="M9 18h6"></path>
+                          <path d="M10 22h4"></path>
+                        </svg>
+                        <span>Suggested Tags:</span></div>
+                      <div class="flex flex-wrap gap-1 mt-1"><span
+                          class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Climate Action</span><span
+                          class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ European Green Deal</span><span
+                          class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Sustainability</span><span
+                          class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Environment Policy</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <h4
+                  class="font-semibold text-foreground flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="lucide lucide-link2 h-4 w-4 text-primary">
+                    <path d="M9 17H7A5 5 0 0 1 7 7h2"></path>
+                    <path d="M15 7h2a5 5 0 1 1 0 10h-2"></path>
+                    <line x1="8" x2="16" y1="12" y2="12"></line>
+                  </svg>
+                  Link Analysis
+                </h4>
+                <div class="p-3 rounded-sm bg-success-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                      <path d="m9 11 3 3L22 4"></path>
+                    </svg>
+                    <span class="font-medium text-sm">Broken Links</span></div>
+                  <p class="text-xs text-muted-foreground mt-1">No broken links
+                    detected</p></div>
+                <div class="p-3 rounded-sm bg-error-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-alert h-4 w-4 text-error">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" x2="12" y1="8" y2="12"></line>
+                      <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                    </svg>
+                    <span class="font-medium text-sm">Portal Backlinks</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border flex justify-end">
+              <button
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 ecl-button-primary gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round"
+                     class="lucide lucide-square-pen h-4 w-4">
+                  <path
+                    d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                  <path
+                    d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path>
+                </svg>
+                Edit Publication
               </button>
             </div>
           </div>
@@ -511,14 +843,215 @@
               </div>
               <button
                 class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 gap-2">
-                Expand
+                Collapse
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                      viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round"
                      stroke-linejoin="round"
-                     class="lucide lucide-chevron-down h-4 w-4">
-                  <path d="m6 9 6 6 6-6"></path>
+                     class="lucide lucide-chevron-up h-4 w-4">
+                  <path d="m18 15-6-6-6 6"></path>
                 </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="border-t border-border bg-dark-5 p-6 animate-accordion-down">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <h4
+                  class="font-semibold text-foreground flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="lucide lucide-globe h-4 w-4 text-primary">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path
+                      d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                  SEO Analysis
+                </h4>
+                <div class="space-y-3">
+                  <div class="p-3 rounded-sm bg-success-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <span class="font-medium text-sm">Schema.org Markup</span>
+                    </div>
+                    <p class="text-xs text-muted-foreground mt-1">Structured
+                      data is properly implemented</p></div>
+                  <div class="p-3 rounded-sm bg-success-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <span class="font-medium text-sm">Meta Tags</span></div>
+                  </div>
+                  <div class="p-3 rounded-sm bg-success-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <span class="font-medium text-sm">Content Tags</span>
+                    </div>
+                    <div class="flex flex-wrap gap-1 mt-2"><span
+                        class="px-2 py-0.5 bg-primary-10 text-primary text-xs rounded-sm">AI</span><span
+                        class="px-2 py-0.5 bg-primary-10 text-primary text-xs rounded-sm">Regulation</span><span
+                        class="px-2 py-0.5 bg-primary-10 text-primary text-xs rounded-sm">Technology</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <h4
+                  class="font-semibold text-foreground flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="lucide lucide-link2 h-4 w-4 text-primary">
+                    <path d="M9 17H7A5 5 0 0 1 7 7h2"></path>
+                    <path d="M15 7h2a5 5 0 1 1 0 10h-2"></path>
+                    <line x1="8" x2="16" y1="12" y2="12"></line>
+                  </svg>
+                  Link Analysis
+                </h4>
+                <div class="p-3 rounded-sm bg-error-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-alert h-4 w-4 text-error">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" x2="12" y1="8" y2="12"></line>
+                      <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                    </svg>
+                    <span class="font-medium text-sm">Broken Links</span></div>
+                  <ul class="mt-2 space-y-1">
+                    <li class="flex items-center gap-2 text-xs text-error"><span
+                        class="px-1.5 py-0.5 bg-error/10 rounded text-[10px] font-mono">404</span><span
+                        class="truncate">Previous guidelines</span><span
+                        class="text-muted-foreground truncate">(https://old-link.eu/removed)</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-3 rounded-sm bg-error-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-alert h-4 w-4 text-error">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" x2="12" y1="8" y2="12"></line>
+                      <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                    </svg>
+                    <span class="font-medium text-sm">Portal Backlinks</span>
+                  </div>
+                </div>
+                <div class="p-3 rounded-sm bg-info-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-lightbulb h-4 w-4 text-info">
+                      <path
+                        d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                      <path d="M9 18h6"></path>
+                      <path d="M10 22h4"></path>
+                    </svg>
+                    <span class="font-medium text-sm">Potential Backlinks</span>
+                  </div>
+                  <ul class="mt-2 space-y-1">
+                    <li class="flex items-center gap-2 text-xs text-info">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-link h-3 w-3">
+                        <path
+                          d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path
+                          d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                      </svg>
+                      <a href="https://ec.europa.eu/ai-office" target="_blank"
+                         rel="noopener noreferrer"
+                         class="hover:underline flex items-center gap-1">European
+                        AI Office
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                             height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-external-link h-2.5 w-2.5">
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        </svg>
+                      </a></li>
+                    <li class="flex items-center gap-2 text-xs text-info">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-link h-3 w-3">
+                        <path
+                          d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path
+                          d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                      </svg>
+                      <a href="https://eur-lex.europa.eu/ai-act" target="_blank"
+                         rel="noopener noreferrer"
+                         class="hover:underline flex items-center gap-1">AI Act
+                        Official Text
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                             height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-external-link h-2.5 w-2.5">
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        </svg>
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border flex justify-end">
+              <button
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 ecl-button-primary gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round"
+                     class="lucide lucide-square-pen h-4 w-4">
+                  <path
+                    d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                  <path
+                    d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path>
+                </svg>
+                Edit Publication
               </button>
             </div>
           </div>
@@ -612,14 +1145,216 @@
               </div>
               <button
                 class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 gap-2">
-                Expand
+                Collapse
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                      viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round"
                      stroke-linejoin="round"
-                     class="lucide lucide-chevron-down h-4 w-4">
-                  <path d="m6 9 6 6 6-6"></path>
+                     class="lucide lucide-chevron-up h-4 w-4">
+                  <path d="m18 15-6-6-6 6"></path>
                 </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="border-t border-border bg-dark-5 p-6 animate-accordion-down">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <h4
+                  class="font-semibold text-foreground flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="lucide lucide-globe h-4 w-4 text-primary">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path
+                      d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                  SEO Analysis
+                </h4>
+                <div class="space-y-3">
+                  <div class="p-3 rounded-sm bg-success-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <span class="font-medium text-sm">Schema.org Markup</span>
+                    </div>
+                    <p class="text-xs text-muted-foreground mt-1">Structured
+                      data is properly implemented</p></div>
+                  <div class="p-3 rounded-sm bg-success-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <span class="font-medium text-sm">Meta Tags</span></div>
+                  </div>
+                  <div class="p-3 rounded-sm bg-success-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <span class="font-medium text-sm">Content Tags</span>
+                    </div>
+                    <div class="flex flex-wrap gap-1 mt-2"><span
+                        class="px-2 py-0.5 bg-primary-10 text-primary text-xs rounded-sm">Digital Policy</span><span
+                        class="px-2 py-0.5 bg-primary-10 text-primary text-xs rounded-sm">Competition Law</span><span
+                        class="px-2 py-0.5 bg-primary-10 text-primary text-xs rounded-sm">DMA</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <h4
+                  class="font-semibold text-foreground flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="lucide lucide-link2 h-4 w-4 text-primary">
+                    <path d="M9 17H7A5 5 0 0 1 7 7h2"></path>
+                    <path d="M15 7h2a5 5 0 1 1 0 10h-2"></path>
+                    <line x1="8" x2="16" y1="12" y2="12"></line>
+                  </svg>
+                  Link Analysis
+                </h4>
+                <div class="p-3 rounded-sm bg-error-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-alert h-4 w-4 text-error">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" x2="12" y1="8" y2="12"></line>
+                      <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                    </svg>
+                    <span class="font-medium text-sm">Broken Links</span></div>
+                  <ul class="mt-2 space-y-1">
+                    <li class="flex items-center gap-2 text-xs text-error"><span
+                        class="px-1.5 py-0.5 bg-error/10 rounded text-[10px] font-mono">404</span><span
+                        class="truncate">this resource</span><span
+                        class="text-muted-foreground truncate">(https://broken-link.example.com/404)</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-3 rounded-sm bg-success-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                      <path d="m9 11 3 3L22 4"></path>
+                    </svg>
+                    <span class="font-medium text-sm">Portal Backlinks</span>
+                  </div>
+                  <ul class="mt-2 space-y-1">
+                    <li class="flex items-center gap-2 text-xs text-success">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-link h-3 w-3">
+                        <path
+                          d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path
+                          d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                      </svg>
+                      <a href="https://europa.eu" target="_blank"
+                         rel="noopener noreferrer"
+                         class="hover:underline flex items-center gap-1">Europa.eu
+                        Official Portal
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                             height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-external-link h-2.5 w-2.5">
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        </svg>
+                      </a></li>
+                  </ul>
+                </div>
+                <div class="p-3 rounded-sm bg-info-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-lightbulb h-4 w-4 text-info">
+                      <path
+                        d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                      <path d="M9 18h6"></path>
+                      <path d="M10 22h4"></path>
+                    </svg>
+                    <span class="font-medium text-sm">Potential Backlinks</span>
+                  </div>
+                  <ul class="mt-2 space-y-1">
+                    <li class="flex items-center gap-2 text-xs text-info">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-link h-3 w-3">
+                        <path
+                          d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path
+                          d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                      </svg>
+                      <a href="https://ec.europa.eu/digital-single-market"
+                         target="_blank" rel="noopener noreferrer"
+                         class="hover:underline flex items-center gap-1">European
+                        Commission DG Connect
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                             height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-external-link h-2.5 w-2.5">
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        </svg>
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border flex justify-end">
+              <button
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 ecl-button-primary gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round"
+                     class="lucide lucide-square-pen h-4 w-4">
+                  <path
+                    d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                  <path
+                    d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path>
+                </svg>
+                Edit Publication
               </button>
             </div>
           </div>
@@ -713,14 +1448,185 @@
               </div>
               <button
                 class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 gap-2">
-                Expand
+                Collapse
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                      viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round"
                      stroke-linejoin="round"
-                     class="lucide lucide-chevron-down h-4 w-4">
-                  <path d="m6 9 6 6 6-6"></path>
+                     class="lucide lucide-chevron-up h-4 w-4">
+                  <path d="m18 15-6-6-6 6"></path>
                 </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="border-t border-border bg-dark-5 p-6 animate-accordion-down">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <h4
+                  class="font-semibold text-foreground flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="lucide lucide-globe h-4 w-4 text-primary">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path
+                      d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                  SEO Analysis
+                </h4>
+                <div class="space-y-3">
+                  <div class="p-3 rounded-sm bg-error-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-alert h-4 w-4 text-error">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" x2="12" y1="8" y2="12"></line>
+                        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                      </svg>
+                      <span class="font-medium text-sm">Schema.org Markup</span>
+                    </div>
+                    <p class="text-xs text-muted-foreground mt-1">Missing
+                      structured data markup</p></div>
+                  <div class="p-3 rounded-sm bg-success-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <span class="font-medium text-sm">Meta Tags</span></div>
+                    <div class="mt-2 space-y-1">
+                      <div class="flex items-center gap-1 text-xs text-warning">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                             height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-lightbulb h-3 w-3">
+                          <path
+                            d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                          <path d="M9 18h6"></path>
+                          <path d="M10 22h4"></path>
+                        </svg>
+                        <span>AI Suggestions:</span></div>
+                      <ul class="text-xs text-muted-foreground space-y-1 ml-4">
+                        <li>• Metatags look good but consider adding structured
+                          data for funding opportunities
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="p-3 rounded-sm bg-success-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <span class="font-medium text-sm">Content Tags</span>
+                    </div>
+                    <div class="flex flex-wrap gap-1 mt-2"><span
+                        class="px-2 py-0.5 bg-primary-10 text-primary text-xs rounded-sm">Funding</span><span
+                        class="px-2 py-0.5 bg-primary-10 text-primary text-xs rounded-sm">Regional Development</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <h4
+                  class="font-semibold text-foreground flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="lucide lucide-link2 h-4 w-4 text-primary">
+                    <path d="M9 17H7A5 5 0 0 1 7 7h2"></path>
+                    <path d="M15 7h2a5 5 0 1 1 0 10h-2"></path>
+                    <line x1="8" x2="16" y1="12" y2="12"></line>
+                  </svg>
+                  Link Analysis
+                </h4>
+                <div class="p-3 rounded-sm bg-success-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                      <path d="m9 11 3 3L22 4"></path>
+                    </svg>
+                    <span class="font-medium text-sm">Broken Links</span></div>
+                  <p class="text-xs text-muted-foreground mt-1">No broken links
+                    detected</p></div>
+                <div class="p-3 rounded-sm bg-success-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                      <path d="m9 11 3 3L22 4"></path>
+                    </svg>
+                    <span class="font-medium text-sm">Portal Backlinks</span>
+                  </div>
+                  <ul class="mt-2 space-y-1">
+                    <li class="flex items-center gap-2 text-xs text-success">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-link h-3 w-3">
+                        <path
+                          d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path
+                          d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                      </svg>
+                      <a href="https://europa.eu/regional-policy"
+                         target="_blank" rel="noopener noreferrer"
+                         class="hover:underline flex items-center gap-1">Europa
+                        Regional Policy
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                             height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-external-link h-2.5 w-2.5">
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        </svg>
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border flex justify-end">
+              <button
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 ecl-button-primary gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round"
+                     class="lucide lucide-square-pen h-4 w-4">
+                  <path
+                    d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                  <path
+                    d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path>
+                </svg>
+                Edit Publication
               </button>
             </div>
           </div>
@@ -813,14 +1719,193 @@
               </div>
               <button
                 class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 gap-2">
-                Expand
+                Collapse
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                      viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round"
                      stroke-linejoin="round"
-                     class="lucide lucide-chevron-down h-4 w-4">
-                  <path d="m6 9 6 6 6-6"></path>
+                     class="lucide lucide-chevron-up h-4 w-4">
+                  <path d="m18 15-6-6-6 6"></path>
                 </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="border-t border-border bg-dark-5 p-6 animate-accordion-down">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <h4
+                  class="font-semibold text-foreground flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="lucide lucide-globe h-4 w-4 text-primary">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path
+                      d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                  SEO Analysis
+                </h4>
+                <div class="space-y-3">
+                  <div class="p-3 rounded-sm bg-success-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <span class="font-medium text-sm">Schema.org Markup</span>
+                    </div>
+                    <p class="text-xs text-muted-foreground mt-1">Structured
+                      data is properly implemented</p></div>
+                  <div class="p-3 rounded-sm bg-success-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <span class="font-medium text-sm">Meta Tags</span></div>
+                  </div>
+                  <div class="p-3 rounded-sm bg-success-5">
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <span class="font-medium text-sm">Content Tags</span>
+                    </div>
+                    <div class="flex flex-wrap gap-1 mt-2"><span
+                        class="px-2 py-0.5 bg-primary-10 text-primary text-xs rounded-sm">Education</span><span
+                        class="px-2 py-0.5 bg-primary-10 text-primary text-xs rounded-sm">Erasmus+</span><span
+                        class="px-2 py-0.5 bg-primary-10 text-primary text-xs rounded-sm">Youth</span><span
+                        class="px-2 py-0.5 bg-primary-10 text-primary text-xs rounded-sm">Mobility</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <h4
+                  class="font-semibold text-foreground flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round"
+                       stroke-linejoin="round"
+                       class="lucide lucide-link2 h-4 w-4 text-primary">
+                    <path d="M9 17H7A5 5 0 0 1 7 7h2"></path>
+                    <path d="M15 7h2a5 5 0 1 1 0 10h-2"></path>
+                    <line x1="8" x2="16" y1="12" y2="12"></line>
+                  </svg>
+                  Link Analysis
+                </h4>
+                <div class="p-3 rounded-sm bg-success-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                      <path d="m9 11 3 3L22 4"></path>
+                    </svg>
+                    <span class="font-medium text-sm">Broken Links</span></div>
+                  <p class="text-xs text-muted-foreground mt-1">No broken links
+                    detected</p></div>
+                <div class="p-3 rounded-sm bg-success-5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                         height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         class="lucide lucide-circle-check-big h-4 w-4 text-success">
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                      <path d="m9 11 3 3L22 4"></path>
+                    </svg>
+                    <span class="font-medium text-sm">Portal Backlinks</span>
+                  </div>
+                  <ul class="mt-2 space-y-1">
+                    <li class="flex items-center gap-2 text-xs text-success">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-link h-3 w-3">
+                        <path
+                          d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path
+                          d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                      </svg>
+                      <a href="https://erasmus-plus.ec.europa.eu"
+                         target="_blank" rel="noopener noreferrer"
+                         class="hover:underline flex items-center gap-1">Erasmus+
+                        Official Site
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                             height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-external-link h-2.5 w-2.5">
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        </svg>
+                      </a></li>
+                    <li class="flex items-center gap-2 text-xs text-success">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                           height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2"
+                           stroke-linecap="round" stroke-linejoin="round"
+                           class="lucide lucide-link h-3 w-3">
+                        <path
+                          d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path
+                          d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                      </svg>
+                      <a href="https://europa.eu/education" target="_blank"
+                         rel="noopener noreferrer"
+                         class="hover:underline flex items-center gap-1">Europa
+                        Education Portal
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                             height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-external-link h-2.5 w-2.5">
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        </svg>
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border flex justify-end">
+              <button
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 ecl-button-primary gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round"
+                     class="lucide lucide-square-pen h-4 w-4">
+                  <path
+                    d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                  <path
+                    d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path>
+                </svg>
+                Edit Publication
               </button>
             </div>
           </div>
@@ -828,4 +1913,31 @@
       </div>
     </div>
   </main>
+  <footer class="bg-primary text-primary-foreground mt-12">
+    <div class="container mx-auto px-6 py-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div
+            class="bg-secondary text-secondary-foreground px-2 py-1 rounded-sm font-bold text-sm">
+            Spresso
+          </div>
+          <span class="text-sm text-primary-40">AI-Powered SEO Dashboard</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
