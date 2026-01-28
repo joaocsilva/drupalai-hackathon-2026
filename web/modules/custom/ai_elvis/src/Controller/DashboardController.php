@@ -4,6 +4,7 @@ namespace Drupal\ai_elvis\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\node\Entity\Node;
+use Drupal\Core\Cache\Cache;
 
 /**
  * Dashboard controller
@@ -70,6 +71,9 @@ class DashboardController extends ControllerBase {
         'library' => [
           'ai_elvis/dashboard',
         ],
+      ],
+      '#cache' => [
+        'tags' => Cache::mergeTags(['node_list:publication'], []),
       ],
     ];
   }
