@@ -62,6 +62,10 @@ class DashboardController extends ControllerBase {
         'backlinks' => $nodeBackLinks['details'],
         'schema' => $nodeSchema['details'],
         'taxonomy' => $nodeTaxonomy['details'],
+        'metatags_score' => $nodeMetatags['score'],
+        'backlinks_score' => $nodeBackLinks['score'],
+        'schema_score' => $nodeSchema['score'],
+        'taxonomy_score' => $nodeTaxonomy['score'],
       ];
     }
 
