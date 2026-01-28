@@ -63,6 +63,11 @@ class DashboardController extends ControllerBase {
         'taxonomy' => $nodeTaxonomy['details'],
       ];
     }
+
+    usort($publications, function ($item1, $item2) {
+      return $item1['score'] <=> $item2['score'];
+    });
+
     return [
       '#theme' => 'dashboard',
       '#publications' => $publications,
