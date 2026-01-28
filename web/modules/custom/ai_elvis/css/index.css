@@ -322,7 +322,7 @@ h1, h2, h3, h4, h5, h6 {font-family: Arial, sans-serif;font-weight: 700}
 .bg-muted {background-color: hsl(var(--muted))}
 .bg-muted\/50 {background-color: hsl(var(--muted) / .5)}
 .bg-popover {background-color: hsl(var(--popover))}
-.bg-primary {background-color: #364DBA}
+.bg-primary {background-color: hsl(var(--primary))}
 .bg-primary-10 {background-color: hsl(var(--primary-10))}
 .bg-primary-5 {background-color: hsl(var(--primary-5))}
 .bg-primary-80\/30 {background-color: hsl(var(--primary-80) / .3)}
@@ -799,4 +799,8 @@ h1, h2, h3, h4, h5, h6 {font-family: Arial, sans-serif;font-weight: 700}
 
 .dashboard__header-text {
   font-size: 24px;
+}
+
+.dashboard__collapse-button {
+  min-width: 105px;
 }
