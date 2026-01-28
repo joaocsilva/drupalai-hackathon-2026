@@ -3,6 +3,7 @@
 namespace Drupal\ai_elvis\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Link;
 use Drupal\node\Entity\Node;
 use Drupal\Core\Cache\Cache;
 
@@ -66,6 +67,7 @@ class DashboardController extends ControllerBase {
         'backlinks_score' => $nodeBackLinks['score'],
         'schema_score' => $nodeSchema['score'],
         'taxonomy_score' => $nodeTaxonomy['score'],
+        'edit_link' => $node->toUrl('edit-form')->toString(),
       ];
     }
 
