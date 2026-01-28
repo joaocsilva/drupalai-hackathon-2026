@@ -1,5 +1,0 @@
-ai_elvis.link_opportunities_tab:
-  route_name: ai_elvis.link_opportunities
-  base_route: entity.node.canonical
-  title: 'Link Opportunities'
-  weight: 100

@@ -1,8 +1,0 @@
-ai_elvis.link_opportunities:
-  path: '/node/{node}/link-opportunities'
-  defaults:
-    _controller: '\Drupal\ai_elvis\Controller\LinkOpportunitiesController::findLinkingOpportunities'
-    _title: 'Node Linking Opportunities'
-  requirements:
-    _permission: 'access content'
-    node: \d+

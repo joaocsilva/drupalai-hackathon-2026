@@ -17,6 +17,13 @@ function ai_elvis_theme($existing, $type, $theme, $path) {
       ],
       'template' => 'similar-content-linking',
     ],
+    'user_nodes_list' => [
+      'variables' => [
+        'user' => NULL,
+        'nodes' => [],
+      ],
+      'template' => 'user-nodes-list',
+    ],
   ];
 }
 
