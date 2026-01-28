@@ -5,10 +5,3 @@ ai_elvis.dashboard:
     _title: 'Dashboard'
   requirements:
     _permission: 'access content'
-ai_elvis.example:
-  path: '/ai-elvis-example'
-  defaults:
-    _title: 'Example'
-    _controller: '\Drupal\ai_elvis\Controller\ExampleController'
-  requirements:
-    _permission: 'access content'
