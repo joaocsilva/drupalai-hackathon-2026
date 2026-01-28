@@ -25,6 +25,21 @@
   </div>
 {% endmacro %}
 
+{% macro short_icon(type) %}
+  {% if type == 'error' %}
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert h-4 w-4 text-error">
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="12" x2="12" y1="8" y2="12"></line>
+    <line x1="12" x2="12.01" y1="16" y2="16"></line>
+  </svg>
+  {% else %}
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-success">
+    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+    <path d="m9 11 3 3L22 4"></path>
+  </svg>
+  {% endif %}
+{% endmacro %}
+
 <div class="min-h-screen bg-dark-5">
   <header class="bg-primary text-primary-foreground">
     <div class="container mx-auto px-6 py-6">
@@ -205,41 +220,23 @@
                 <div class="space-y-3">
                   <div class="p-3 rounded-sm bg-error-5">
                     <div class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert h-4 w-4 text-error">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" x2="12" y1="8" y2="12"></line>
-                        <line x1="12" x2="12.01" y1="16" y2="16"></line>
-                      </svg>
+                      {{ _self.short_icon('error') }}
                       <span class="font-medium text-sm">Schema.org Markup</span>
                     </div>
-{#                    <p class="text-xs text-muted-foreground mt-1">Missing structured data markup</p>#}
                     {{ publication.schema }}
                   </div>
                   <div class="p-3 rounded-sm bg-error-5">
                     <div class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert h-4 w-4 text-error">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" x2="12" y1="8" y2="12"></line>
-                        <line x1="12" x2="12.01" y1="16" y2="16"></line>
-                      </svg>
+                      {{ _self.short_icon('error') }}
                       <span class="font-medium text-sm">Meta Tags</span>
                     </div>
                     <div class="mt-2 space-y-1">
                       {{ publication.metatags }}
-{#                      <ul class="text-xs text-muted-foreground space-y-1 ml-4">#}
-{#                        <li>• Add title tag: Cross-Border Healthcare Rights in the EU | Europa Portal</li>#}
-{#                        <li>• Add description: Learn about your rights to receive medical treatment in other EU countries</li>#}
-{#                        <li>• Add canonical URL</li>#}
-{#                      </ul>#}
                     </div>
                   </div>
                   <div class="p-3 rounded-sm bg-error-5">
                     <div class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert h-4 w-4 text-error">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" x2="12" y1="8" y2="12"></line>
-                        <line x1="12" x2="12.01" y1="16" y2="16"></line>
-                      </svg>
+                      {{ _self.short_icon('error') }}
                       <span class="font-medium text-sm">Content Tags</span>
                     </div>
                     <div class="mt-2 space-y-1">
@@ -254,10 +251,6 @@
                       </div>
                       <div class="flex flex-wrap gap-1 mt-1">
                         {{ publication.taxonomy.suggestions }}
-{#                        <span class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Healthcare</span>#}
-{#                        <span class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Citizens Rights</span>#}
-{#                        <span class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ Cross-Border Services</span>#}
-{#                        <span class="px-2 py-0.5 bg-secondary-20 text-secondary-180 text-xs rounded-sm">+ EU Law</span>#}
                       </div>
                     </div>
                   </div>
@@ -274,21 +267,14 @@
                 </h4>
                 <div class="p-3 rounded-sm bg-success-5">
                   <div class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-success">
-                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                      <path d="m9 11 3 3L22 4"></path>
-                    </svg>
+                    {{ _self.short_icon('success') }}
                     <span class="font-medium text-sm">Broken Links</span>
                   </div>
                   <p class="text-xs text-muted-foreground mt-1">No broken links detected</p>
                 </div>
                 <div class="p-3 rounded-sm bg-error-5">
                   <div class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert h-4 w-4 text-error">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="12" x2="12" y1="8" y2="12"></line>
-                      <line x1="12" x2="12.01" y1="16" y2="16"></line>
-                    </svg>
+                    {{ _self.short_icon('error') }}
                     <span class="font-medium text-sm">Domain Backlinks</span>
                     {{ publication.backlinks }}
                   </div>
