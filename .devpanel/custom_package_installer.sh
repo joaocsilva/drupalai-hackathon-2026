@@ -20,6 +20,8 @@ if [ -z "$(php --ri gd | grep AVIF)" ]; then
   sudo apt-get install -y -qq libavif-dev
   sudo docker-php-ext-configure gd --with-avif --with-freetype --with-jpeg --with-webp
   sudo docker-php-ext-install gd
+  sudo -E docker-php-ext-install pgsql
+
   # Mark runtime libraries as manually installed, then purge dev package to reduce image size
   for pkg in $(apt-cache depends libavif-dev | grep '^\s*Depends:' | grep -o 'libavif[^, ]*'); do
     sudo apt-mark manual "$pkg"
