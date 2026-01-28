@@ -25,7 +25,9 @@ function ai_elvis_theme($existing, $type, $theme, $path) {
       'template' => 'user-nodes-list',
     ],
     'dashboard' => [
-      'variables' => [],
+      'variables' => [
+        'publications' => [],
+      ],
       'template' => 'dashboard',
     ],
   ];
