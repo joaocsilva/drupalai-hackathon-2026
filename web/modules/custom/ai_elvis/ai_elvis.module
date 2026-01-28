@@ -24,6 +24,10 @@ function ai_elvis_theme($existing, $type, $theme, $path) {
       ],
       'template' => 'user-nodes-list',
     ],
+    'dashboard' => [
+      'variables' => [],
+      'template' => 'dashboard',
+    ],
   ];
 }
 
@@ -34,4 +38,3 @@ function ai_elvis_preprocess_similar_content_linking(&$variables) {
   // Attach the library for styles and JavaScript.
   $variables['#attached']['library'][] = 'ai_elvis/similar_content_linking';
 }
-
