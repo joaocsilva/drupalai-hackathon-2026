@@ -1,50 +1,21 @@
 <div class="min-h-screen bg-dark-5">
   <header class="bg-primary text-primary-foreground">
-    <div class="border-b border-primary-80/30">
-      <div class="container mx-auto px-6 py-2">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <div class="flex gap-0.5">
-              <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-              <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-            </div>
-          </div>
-          <div class="flex items-center gap-4">
-            <span class="text-sm opacity-80">AI Dashboard</span>
-            <span class="relative flex shrink-0 overflow-hidden rounded-full h-8 w-8 border-2 border-secondary">
-              <img class="aspect-square h-full w-full" alt="Elena Müller" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&amp;h=100&amp;fit=crop&amp;crop=face">
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="container mx-auto px-6 py-6">
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-4">
-          <div class="bg-secondary text-secondary-foreground px-3 py-1.5 rounded-sm font-bold text-xl tracking-tight">
-            Spresso
+          <div class="dashboard__logo">
+            <img src="{{ base_path }}/modules/custom/ai_elvis/images/dashboard_logo.png" width="100px" />
           </div>
           <div class="h-8 w-px bg-primary-80/30"></div>
-          <span class="text-primary-20 text-sm">SEO Content Dashboard</span>
+          <h1 class="dashboard__header-text">SEO Optimization Dashboard</h1>
         </div>
         <div class="flex items-center gap-4">
-          <div class="text-right">
-            <p class="font-semibold">Elena Müller</p>
-            <p class="text-sm text-primary-40">Senior Content Editor</p>
-          </div>
-          <span class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12 border-2 border-secondary">
-            <img class="aspect-square h-full w-full" alt="Elena Müller" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&amp;h=100&amp;fit=crop&amp;crop=face">
-          </span>
+          <div class="text-right"><p class="font-semibold">David Kielemoes</p>
+            <p class="text-sm text-primary-40"></p></div>
+          <span
+            class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12 border-2 border-secondary"><img
+              class="aspect-square h-full w-full" alt="Elena Müller"
+              src="https://st4.depositphotos.com/9998432/22597/v/450/depositphotos_225976914-stock-illustration-person-gray-photo-placeholder-man.jpg"></span>
         </div>
       </div>
     </div>
@@ -230,9 +201,15 @@
                   </div>
                 </div>
               </div>
-              <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 gap-2 collapse-button" data-target="details-{{ loop.index }}">
-                Expand
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4">
+              <button
+                class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 gap-2 collapse-button"
+                data-target="details-{{ loop.index }}">
+                Details
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round"
+                     class="lucide lucide-chevron-down h-4 w-4">
                   <path d="m6 9 6 6 6-6"></path>
                 </svg>
               </button>
@@ -364,10 +341,10 @@
     <div class="container mx-auto px-6 py-6">
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <div class="bg-secondary text-secondary-foreground px-2 py-1 rounded-sm font-bold text-sm">
-            Spresso
+          <div class="dashboard__logo">
+            <img src="{{ base_path }}/modules/custom/ai_elvis/images/dashboard_logo.png" width="100px" />
           </div>
-          <span class="text-sm text-primary-40">AI-Powered SEO Dashboard</span>
+          <span class="text-sm text-primary-40">AI-Powered SEO Optimization Dashboard</span>
         </div>
         <div class="flex items-center gap-2">
           <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
