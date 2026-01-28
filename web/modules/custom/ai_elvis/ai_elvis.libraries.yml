@@ -1,0 +1,9 @@
+dashboard:
+  version: 1.x
+  css:
+    theme:
+      css/index.css: {}
+  js:
+    css/index.js: {}
+  dependencies:
+    - core/drupal
