@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\ai_elvis\Plugin\NodeMeasure;
 
+use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\ai_elvis\Attribute\NodeMeasure;
@@ -69,13 +70,18 @@ final class PossibleBacklinks extends NodeMeasurePluginBase implements Container
     // Extract text content from the node
     $text = $this->extractNodeText($node);
 
+    $metadata = new CacheableMetadata();
+    $metadata->addCacheableDependency($node);
+
     if (empty($text)) {
-      return [
+      $build = [
         'score' => 0,
         'details' => [
           '#markup' => '<p>No content available for similarity search.</p>',
         ],
       ];
+      $metadata->applyTo($build);
+      return $build;
     }
 
     // Search for similar content (top 5 results)
@@ -103,20 +109,21 @@ final class PossibleBacklinks extends NodeMeasurePluginBase implements Container
         ];
       }
 
-      $details = [
+      $build = [
         '#theme' => 'item_list',
         '#items' => $items,
         '#list_type' => 'ul',
       ];
     } else {
-      $details = [
+      $build = [
         '#markup' => '<p>No similar content found for backlink opportunities.</p>',
       ];
     }
 
+    $metadata->applyTo($build);
     return [
       'score' => $count > 0 ? 1 : 0,
-      'details' => $details,
+      'details' => $build,
     ];
   }
 
